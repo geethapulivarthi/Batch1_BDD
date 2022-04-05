@@ -1,6 +1,8 @@
 ﻿Feature: RoverMoves
 
-    Rover should be successfully able to move
+    As a rover operator
+    I want the rover to make moves
+    So that the rover moves one step ahead.
 
    Scenario: Rover Movement
         Given Rover is in plateau at (<X>,<Y>) co-ordinates and facing the <Direction>

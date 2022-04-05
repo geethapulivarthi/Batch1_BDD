@@ -35,7 +35,8 @@ namespace MarsRovers.Feature
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Feature", "RoverMoves", "    Rover should be successfully able to move", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Feature", "RoverMoves", "    As a rover operator\r\n    I want the rover to make moves\r\n    So that the rove" +
+                    "r moves one step ahead.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -89,7 +90,7 @@ namespace MarsRovers.Feature
             argumentsOfScenario.Add("M", m);
             argumentsOfScenario.Add("N", n);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Rover Movement", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 5
+#line 7
    this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -109,13 +110,13 @@ namespace MarsRovers.Feature
             else
             {
                 this.ScenarioStart();
-#line 6
+#line 8
         testRunner.Given(string.Format("Rover is in plateau at ({0},{1}) co-ordinates and facing the {2}", x, y, direction), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 7
+#line 9
         testRunner.When(string.Format("the rover moves ({0},{1}) co-ordinates and facing {2}", x, y, direction), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 8
+#line 10
         testRunner.Then(string.Format("the rover reaches new position ({0},{1}) in the same {2}", m, n, direction), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -140,7 +141,7 @@ namespace MarsRovers.Feature
             argumentsOfScenario.Add("Y", y);
             argumentsOfScenario.Add("Direction", direction);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Rover movement out of boundary", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 17
+#line 19
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -160,13 +161,13 @@ namespace MarsRovers.Feature
             else
             {
                 this.ScenarioStart();
-#line 18
+#line 20
         testRunner.Given(string.Format("Rover is in plateau at ({0},{1}) co-ordinates and facing the {2}", x, y, direction), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 19
+#line 21
         testRunner.When(string.Format("the rover moves ({0},{1}) co-ordinates and facing {2}", x, y, direction), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 20
+#line 22
         testRunner.Then("the rover falls out of the plateau", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
